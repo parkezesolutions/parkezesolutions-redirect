@@ -1,0 +1,14 @@
+# Apache configuration for 301 redirect
+# Redirect my.parkezesolutions.com to my.parkeze.com
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Redirect all requests to my.parkeze.com with 301 (Permanent)
+RewriteCond %{HTTP_HOST} ^my\.parkezesolutions\.com$ [NC]
+RewriteRule ^(.*)$ https://my.parkeze.com/$1 [R=301,L]
+
+# If accessed directly without redirect, serve index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

@@ -1,0 +1,5 @@
+# Netlify/Vercel redirects configuration
+# 301 permanent redirect from my.parkezesolutions.com to my.parkeze.com
+
+https://my.parkezesolutions.com/*  https://my.parkeze.com/:splat  301!
+http://my.parkezesolutions.com/*   https://my.parkeze.com/:splat  301!
