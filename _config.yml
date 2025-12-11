@@ -1,0 +1,10 @@
+# GitHub Pages configuration
+# This ensures GitHub Pages properly serves the redirect page
+
+# No Jekyll processing needed for this static redirect page
+exclude:
+  - README.md
+  - .htaccess
+  - _redirects
+  - netlify.toml
+  - vercel.json
